@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HappyLandia</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* верх */
+.topbar {
+    background: linear-gradient(90deg, #6a11cb, #7b2ff7);
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    animation: slideDown 1s ease;
+}
+
+/* центр */
+.container {
+    padding: 40px 20px;
+}
+
+/* заголовок */
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: fadeUp 1s ease forwards;
+}
+
+/* панда */
+.panda {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* подпись */
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* график */
+.schedule {
+    display: inline-block;
+    background: linear-gradient(90deg, #6a11cb, #7b2ff7);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+/* кнопки */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.btn:nth-child(1){animation-delay: 0.8s;}
+.btn:nth-child(2){animation-delay: 1s;}
+.btn:nth-child(3){animation-delay: 1.2s;}
+.btn:nth-child(4){animation-delay: 1.4s;}
+.btn:nth-child(5){animation-delay: 1.6s;}
+
+/* цвета */
+.menu { background: linear-gradient(45deg, #ff9a00, #ff6a00); }
+.vk { background: linear-gradient(45deg, #2787f5, #1c5fd4); }
+.insta { background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7); }
+.tg { background: linear-gradient(45deg,#2AABEE,#229ED9); }
+.ok { background: linear-gradient(45deg,#f7931e,#ff6a00); }
+
+/* hover */
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* текст кнопок анимация */
+.btn span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: textFadeUp 0.8s ease forwards;
+}
+
+.btn.menu span { animation-delay: 0.8s; }
+.btn.vk span { animation-delay: 1s; }
+.btn.insta span { animation-delay: 1.2s; }
+.btn.tg span { animation-delay: 1.4s; }
+.btn.ok span { animation-delay: 1.6s; }
+
+@keyframes textFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* футер */
+.footer {
+    margin-top: 50px;
+    font-size: 13px;
+    color: #777;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 2s;
+}
+
+/* анимации */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* адаптив */
+@media (max-width: 500px) {
+    h1 { font-size: 32px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div>📍 г.Братск, ул. Южная, 10а</div>
+    <div>📞 +7 908 657-24-24</div>
+</div>
+
+<div class="container">
+
+    <h1>HAPPYLANDIA <span class="panda">🐼</span></h1>
+
+    <div class="subtitle">Детский парк мечты</div>
+
+    <div class="schedule">
+        Будни (Пн–Пт): 12:00–21:00<br>
+        Выходные (Сб–Вс): 12:00–22:00
+    </div>
+
+    <div class="buttons">
+        <a class="btn menu" href="https://happylandiya.ru/menu" target="_blank"><span>🍔 Меню</span></a>
+        <a class="btn vk" href="https://vk.com/happylandiapark" target="_blank"><span>VK</span></a>
+        <a class="btn insta" href="https://www.instagram.com/happylandiapark" target="_blank"><span>Instagram</span></a>
+        <a class="btn tg" href="https://t.me/s/happylandiapark" target="_blank"><span>Telegram</span></a>
+        <a class="btn ok" href="https://ok.ru/profile/910416551602" target="_blank"><span>OK</span></a>
+    </div>
+
+    <div class="footer">
+        © HappyLandia — Детский парк развлечений 🎈
+    </div>
+
+</div>
+
+</body>
+</html>
